@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Text Manipulator</title>
+    <style>
+        
+        body {
+            background-color: #1e1e1e;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        
+        .white-box {
+            background-color: rgb(255, 255, 255);
+            width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 5px;
+        }
+
+        
+        .card {
+            background-color: #f4f4f4;
+            color: black;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+
+       
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+
+        
+        #myText {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 48%;
+            padding: 10px;
+            margin: 4px 0;
+            background-color: #e0e0e0;
+            border: 1px solid #aaa;
+            cursor: pointer;
+        }
+
+       
+        .yellow-bg {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Interactive text manipulator</h1>
+
+    <div class="white-box">
+        <div class="card">
+            <h2>Interactive Text Manipulator</h2>
+
+            <input type="text" id="userInput" placeholder="Type something...">
+
+            
+            <p id="myText">Your text will appear here.</p>
+
+            
+            <button onclick="showText()">Show Text</button>
+            <button onclick="clearText()">Clear</button>
+            <button onclick="makeUppercase()">Uppercase</button>
+            <button onclick="toggleHighlight()">Toggle Highlight</button>
+        </div>
+    </div>
+
+    <script>
+        // 1. Function to show whatever is typed in the box
+        function showText() {
+            var input = document.getElementById("userInput").value;
+            document.getElementById("myText").innerText = input;
+        }
+
+        // 2. Function to reset everything back to start
+        function clearText() {
+            document.getElementById("userInput").value = "";
+            document.getElementById("myText").innerText = "Your text will appear here.";
+            document.getElementById("myText").classList.remove("yellow-bg");
+        }
+
+        // 3. Function to make text uppercase
+        function makeUppercase() {
+            var currentText = document.getElementById("myText").innerText;
+            document.getElementById("myText").innerText = currentText.toUpperCase();
+        }
+
+        // 4. Function to add/remove yellow background
+        function toggleHighlight() {
+            var textElement = document.getElementById("myText");
+            textElement.classList.toggle("yellow-bg");
+        }
+    </script>
+
+</body>
+</html>

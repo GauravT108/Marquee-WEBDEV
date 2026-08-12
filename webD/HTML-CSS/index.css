@@ -1,0 +1,147 @@
+
+
+
+/* Reset & Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #8e526db9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Card Container */
+.product-card {
+    width: 340px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    background: rgb(231, 189, 183);
+    border-radius: 30px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Badge (e.g., 'Trending' or 'Sale') */
+.badge {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 700;
+    background: #b8fb55;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 50px;
+    z-index: 2;
+}
+
+/* Product Image Wrapper */
+.product-tumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 260px;
+    padding: 20px;
+    background: #5f4242;
+    position: relative;
+}
+
+.product-tumb img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 25px;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-tumb img {
+    transform: scale(1.08) rotate(-5deg); /* Dynamic shoe tilt on hover */
+}
+
+/* Product Details */
+.product-details {
+    padding: 25px;
+}
+
+.product-catagory {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #724949;
+    margin-bottom: 8px;
+}
+
+.product-details h4 a {
+    font-weight: 600;
+    display: block;
+    font-size: 20px;
+    color: #465679;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.product-details h4 a:hover {
+    color: #ff4757;
+}
+
+.product-details p {
+    font-size: 14px;
+    line-height: 20px;
+    color: #747d8c;
+    margin-bottom: 20px;
+}
+
+/* Bottom Row (Price & Button) */
+.product-bottom-details {
+    overflow: hidden;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-price {
+    font-size: 20px;
+    color: #ff4757;
+    font-weight: 700;
+}
+
+.product-price small {
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: line-through;
+    color: #a4b0be;
+    margin-right: 8px;
+}
+
+/* Action Button */
+.buy-btn {
+    background: #2f3542;
+    color: #fff;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.buy-btn:hover {
+    background: #ff4757;
+}

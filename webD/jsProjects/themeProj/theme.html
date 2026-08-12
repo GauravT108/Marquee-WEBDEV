@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+    <main class="page-container">
+        <h1 class="main-title"> Theme Changer</h1>
+
+        <div class="card" id="themeCard">
+            <h2 class="card-title">THEME CHANGER</h2>
+            <p class="card-text">click here to change theme</p>
+            <button class="toggle-btn" onclick="toggleTheme()">ToggleTheme</button>
+        </div>
+    </main>
+
+    <script>
+        function toggleTheme(){
+            const card = document.getElementById('themeCard');
+            card.classList.toggle('light-theme');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+/* Reset basic margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Center the card perfectly on the screen */
+body {
+    background-color: #eef2f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main Card Container */
+.card-container {
+    background-color: #ffffff;
+    width: 350px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden; /* Keeps the top background rounded corners clean */
+    text-align: center;
+    padding-bottom: 24px;
+}
+
+/* Top Header (Landscape Image Background) */
+.card-header {
+    position: relative;
+    height: 160px;
+    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=600');
+    background-size: cover;
+    background-position: center;
+    margin: 15px;
+    border-radius: 20px;
+}
+
+/* Plus Button on top right */
+.add-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Rounded Profile Image overlapping the header background */
+.profile-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    object-fit: cover;
+    position: absolute;
+    bottom: -45px; /* Pushes half of the image below the header background */
+    left: 50%;
+    transform: translateX(-50%); /* Centers the absolute element */
+}
+
+/* Body Content (Text) */
+.card-body {
+    margin-top: 55px; /* Adds space because the profile img is overlapping */
+    padding: 0 25px;
+}
+
+.user-name {
+    font-size: 22px;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.user-title {
+    font-size: 14px;
+    color: #7f8c8d;
+    line-height: 1.5;
+}
+
+/* Stats Container (Likes, Posts, Views) */
+.card-stats {
+    display: flex;
+    justify-content: space-around;
+    background-color: #fafafa;
+    border: 1px solid #f0f0f0;
+    border-radius: 16px;
+    margin: 25px 20px;
+    padding: 15px 10px;
+}
+
+.stat-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #bdc3c7;
+    margin-top: 4px;
+}
+
+/* Footer Section for Social Media Icons */
+.card-footer {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 10px;
+}
+
+.social-icon {
+    color: #2c3e50;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+/* Optional hover effect for interactivity */
+.social-icon:hover {
+    color: #7f8c8d;
+}

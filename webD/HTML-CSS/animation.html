@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f5f5f5;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: #d38dce;
+        transition: all 0.5s ease-in-out;
+      }
+      .box:hover {
+        width: 200px;
+        height: 50px;
+        background-color: #8e43b4;
+        border-radius: 10px;
+      }
+      @media (max-width: 600px) {
+        body {
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #dcffac;
+        }
+        .box {
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
